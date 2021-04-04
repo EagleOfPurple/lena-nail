@@ -2,6 +2,7 @@
     font-family: 'Calligraphia One';
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
     src: url('../fonts/CalligraphiaOne.woff2') format('woff2'), url('../fonts/CalligraphiaOne.woff') format('woff');
 }
 
@@ -85,14 +86,20 @@ button {
 }
 
 .dsg-bg-marker {
+    background: -o-linear-gradient(315deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.3) 10%, rgba(255, 255, 255, 0.3) 20%, rgba(255, 255, 255, 0.6) 25%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.4) 48%, rgba(255, 255, 255, 0.7) 59%, rgba(255, 255, 255, 0.9) 59%, rgba(255, 255, 255, 0.7) 60%, rgba(255, 255, 255, 0.9) 65%, rgba(255, 255, 255, 0.2) 95%);
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.3) 10%, rgba(255, 255, 255, 0.3) 20%, rgba(255, 255, 255, 0.6) 25%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.4) 48%, rgba(255, 255, 255, 0.7) 59%, rgba(255, 255, 255, 0.9) 59%, rgba(255, 255, 255, 0.7) 60%, rgba(255, 255, 255, 0.9) 65%, rgba(255, 255, 255, 0.2) 95%);
     position: relative;
     overflow: hidden;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
 }
 
 .dsg-bg-marker:hover {
+    -webkit-animation: hover 1.5s ease-in;
     animation: hover 1.5s ease-in;
+    -webkit-transform: scale(1.01);
+    -ms-transform: scale(1.01);
     transform: scale(1.01);
 }
 
@@ -103,32 +110,64 @@ button {
     left: -80px;
     width: 90%;
     height: 100%;
+    background: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, .0)), color-stop(rgba(255, 255, 255, .8)), to(rgba(255, 255, 255, .0))) no-repeat -60px 0%;
+    background: -o-linear-gradient(right, rgba(255, 255, 255, .0), rgba(255, 255, 255, .8), rgba(255, 255, 255, .0)) no-repeat -60px 0%;
     background: linear-gradient(to left, rgba(255, 255, 255, .0), rgba(255, 255, 255, .8), rgba(255, 255, 255, .0)) no-repeat -60px 0%;
     background-size: 60px 100%;
+    -webkit-transform: skewX(-50deg);
+    -ms-transform: skewX(-50deg);
     transform: skewX(-50deg);
 }
 
 .header-menu__sign-up:hover::after,
 .header-menu__price:hover::after,
 .dsg-bg-marker:hover::before {
+    -webkit-transition: 1s linear;
+    -o-transition: 1s linear;
     transition: 1s linear;
     background-position: 100% 0%;
 }
 
-@keyframes hover {
+@-webkit-keyframes hover {
     0% {
+        -webkit-transform: scale(1);
         transform: scale(1);
         background: rgba(255, 255, 255, 1);
     }
     10% {
+        -webkit-transform: scale(1.015);
         transform: scale(1.015);
         background: rgba(255, 255, 255, 0.8);
     }
     50% {
+        -webkit-transform: scale(1.01);
         transform: scale(1.01);
         background: rgba(255, 255, 255, 0.4), linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.3) 10%, rgba(255, 255, 255, 0.3) 20%, rgba(255, 255, 255, 0.6) 25%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.4) 48%, rgba(255, 255, 255, 0.7) 59%, rgba(255, 255, 255, 0.9) 59%, rgba(255, 255, 255, 0.7) 60%, rgba(255, 255, 255, 0.9) 65%, rgba(255, 255, 255, 0.2) 95%);
     }
     100% {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.3) 10%, rgba(255, 255, 255, 0.3) 20%, rgba(255, 255, 255, 0.6) 25%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.4) 48%, rgba(255, 255, 255, 0.7) 59%, rgba(255, 255, 255, 0.9) 59%, rgba(255, 255, 255, 0.7) 60%, rgba(255, 255, 255, 0.9) 65%, rgba(255, 255, 255, 0.2) 95%);
+    }
+}
+
+@keyframes hover {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        background: rgba(255, 255, 255, 1);
+    }
+    10% {
+        -webkit-transform: scale(1.015);
+        transform: scale(1.015);
+        background: rgba(255, 255, 255, 0.8);
+    }
+    50% {
+        -webkit-transform: scale(1.01);
+        transform: scale(1.01);
+        background: rgba(255, 255, 255, 0.4), -o-linear-gradient(315deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.3) 10%, rgba(255, 255, 255, 0.3) 20%, rgba(255, 255, 255, 0.6) 25%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.4) 48%, rgba(255, 255, 255, 0.7) 59%, rgba(255, 255, 255, 0.9) 59%, rgba(255, 255, 255, 0.7) 60%, rgba(255, 255, 255, 0.9) 65%, rgba(255, 255, 255, 0.2) 95%);
+        background: rgba(255, 255, 255, 0.4), linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.3) 10%, rgba(255, 255, 255, 0.3) 20%, rgba(255, 255, 255, 0.6) 25%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.4) 48%, rgba(255, 255, 255, 0.7) 59%, rgba(255, 255, 255, 0.9) 59%, rgba(255, 255, 255, 0.7) 60%, rgba(255, 255, 255, 0.9) 65%, rgba(255, 255, 255, 0.2) 95%);
+    }
+    100% {
+        background: -o-linear-gradient(315deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.3) 10%, rgba(255, 255, 255, 0.3) 20%, rgba(255, 255, 255, 0.6) 25%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.4) 48%, rgba(255, 255, 255, 0.7) 59%, rgba(255, 255, 255, 0.9) 59%, rgba(255, 255, 255, 0.7) 60%, rgba(255, 255, 255, 0.9) 65%, rgba(255, 255, 255, 0.2) 95%);
         background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.3) 10%, rgba(255, 255, 255, 0.3) 20%, rgba(255, 255, 255, 0.6) 25%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.4) 48%, rgba(255, 255, 255, 0.7) 59%, rgba(255, 255, 255, 0.9) 59%, rgba(255, 255, 255, 0.7) 60%, rgba(255, 255, 255, 0.9) 65%, rgba(255, 255, 255, 0.2) 95%);
     }
 }
@@ -138,17 +177,22 @@ button {
     display: block;
     height: 1px;
     position: absolute;
+    background: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, .0)), color-stop(rgba(255, 255, 255, .75)), to(rgba(255, 255, 255, .0))) no-repeat -60px 0%, #a63b81;
+    background: -o-linear-gradient(right, rgba(255, 255, 255, .0), rgba(255, 255, 255, .75), rgba(255, 255, 255, .0)) no-repeat -60px 0%, #a63b81;
     background: linear-gradient(to left, rgba(255, 255, 255, .0), rgba(255, 255, 255, .75), rgba(255, 255, 255, .0)) no-repeat -60px 0%, #a63b81;
     background-size: 60px 100%;
 }
 
 .dsg-underline:hover::after {
+    -webkit-transition: 1s linear;
+    -o-transition: 1s linear;
     transition: 1s linear;
     background-position: 200% 0%;
 }
 
 .item-container {
     padding: 15px 15px 10px 10px;
+    background: -o-linear-gradient(315deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.2) 20%, rgba(255, 255, 255, 0.2) 30%, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.2) 55%, rgba(255, 255, 255, 0.3) 65%, rgba(255, 255, 255, 0.4) 72%, rgba(255, 255, 255, 0.1) 96%);
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.2) 20%, rgba(255, 255, 255, 0.2) 30%, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.2) 55%, rgba(255, 255, 255, 0.3) 65%, rgba(255, 255, 255, 0.4) 72%, rgba(255, 255, 255, 0.1) 96%);
     position: relative;
     z-index: 1;

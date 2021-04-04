@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ногтевой сервис</title>
 
+    <link rel="preload" href="fonts/CalligraphiaOne.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/CalligraphiaOne.woff2" as="font" type="font/woff" crossorigin>
+
     <link rel="stylesheet" type="text/css" href="style/style-global.css" />
     <link rel="stylesheet" type="text/css" href="style/style.css" />
-    <link rel="stylesheet" type="text/css" href="style/jquery.datetimepicker.css" />
-    <script src="javascript/jquery.js" defer></script>
-    <script src="javascript/jquery.datetimepicker.js" defer></script>
 </head>
 
 <body>
@@ -35,7 +35,7 @@
 
     <main class="main">
         <section class="main__section section-about">
-            <h2 class="section-about__heading">О нас</h2>
+            <h2 class="section-about__heading media-two-fs">О нас</h2>
 
             <ul class="section-about__block">
                 <li class="section-about__item-container">
@@ -57,11 +57,11 @@
         </section>
 
         <section class="main__section section-gallery">
-            <div class="section-gallery__header">
+            <div class="section-gallery__header media-first-h-auto">
                 <h2 class="visually-hidden">Галерея работ</h2>
                 <!-- сделать анимацию стрелочек -->
                 <div class="section-gallery__btn-container dsg-bg-marker">
-                    <button class="section-gallery__btn">Галерея работ</button>
+                    <button class="section-gallery__btn media-two-fs">Галерея работ</button>
                 </div>
             </div>
 
@@ -326,14 +326,14 @@
             </div>
         </section>
 
-        <section class="main__section section-price">
-            <h2 class="section-price__heading">Прайс</h2>
+        <section class="main__section section-price media-first-h-auto media-first-section-padding">
+            <h2 class="section-price__heading media-two-fs media-first-heading-margine">Прайс</h2>
 
             <div class="flex-container">
-                <section class="section-price__block block-section price-manicur">
-                    <h3 class="block-section__heading dsg-underline">Маникюр</h3>
+                <section class="section-price__block block-section price-manicur media-first-price-margine">
+                    <h3 class="block-section__heading dsg-underline media-first-heading-margine">Маникюр</h3>
 
-                    <ul class="section-price__list item-container">
+                    <ul class="section-price__list item-container media-first-width">
                         <li>
                             <span>Без покрытия</span>
                             <span>- 400</span>
@@ -361,10 +361,10 @@
                     </ul>
                 </section>
 
-                <section class="section-price__block block-section price-pedicur">
+                <section class="section-price__block block-section price-pedicur media-first-price-margine">
                     <h3 class="block-section__heading dsg-underline">Педикюр</h3>
 
-                    <ul class="section-price__list item-container">
+                    <ul class="section-price__list item-container media-first-width">
                         <li>
                             <span>Без покрытия</span>
                             <span>- 1300</span>
@@ -387,7 +387,7 @@
                     </ul>
                 </section>
 
-                <ul class="section-price__list item-container section-price__additional">
+                <ul class="section-price__list item-container section-price__additional media-first-width media-first-price-margine">
                     <li>
                         <span>Ремонт ногтя</span>
                         <span>- 150</span>
@@ -399,14 +399,14 @@
                     </li>
                 </ul>
 
-                <div class="section-price__btn-container">
+                <div class="section-price__btn-container media-first-width media-first-price-margine">
                     <button class="section-price__btn item-container dsg-underline">Записаться</button>
                 </div>
             </div>
         </section>
 
-        <section class="main__section section-form">
-            <h2 class="section-form__heading">Запись на прием</h2>
+        <section class="main__section section-form media-first-h-auto media-first-section-padding">
+            <h2 class="section-form__heading media-two-fs media-first-heading-margine">Запись на прием</h2>
             <form action="#" class="section-form__form">
                 <label>
                     Имя:
@@ -430,8 +430,8 @@
             </form>
         </section>
 
-        <section class="main__section section-contacts">
-            <h2 class="section-contacts__heading dsg-bg-marker">Контакты</h2>
+        <section class="main__section section-contacts media-first-h-auto">
+            <h2 class="section-contacts__heading dsg-bg-marker media-two-fs">Контакты</h2>
 
             <address>
                 <ul class="section-contacts__contacts">
@@ -443,17 +443,17 @@
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer media-first-h-auto media-first-section-padding">
         <div class="footer__logo-container">
             <img src="img/logo.svg" alt="Logo" class="footer__logo-img">
         </div>
 
         <ul class="footer__menu">
-            <li><a href="" class="footer__link">О нас</a></li>
-            <li><a href="" class="footer__link">Галерея</a></li>
-            <li><a href="" class="footer__link">Прайс</a></li>
-            <li><a href="" class="footer__link">Контакты</a></li>
-            <li><a href="" class="footer__link">Записаться</a></li>
+            <li><a href="" class="footer__link media-two-fs">О нас</a></li>
+            <li><a href="" class="footer__link media-two-fs">Галерея</a></li>
+            <li><a href="" class="footer__link media-two-fs">Прайс</a></li>
+            <li><a href="" class="footer__link media-two-fs">Контакты</a></li>
+            <li><a href="" class="footer__link media-two-fs">Записаться</a></li>
         </ul>
 
     </footer>
