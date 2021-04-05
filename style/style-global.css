@@ -2,8 +2,14 @@
     font-family: 'Calligraphia One';
     font-weight: 400;
     font-style: normal;
-    font-display: swap;
     src: url('../fonts/CalligraphiaOne.woff2') format('woff2'), url('../fonts/CalligraphiaOne.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Ligature Symbols';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../fonts/LigatureSymbols-2.11.woff') format('woff');
 }
 
 html {

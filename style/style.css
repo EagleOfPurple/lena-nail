@@ -69,7 +69,6 @@
 }
 
 .header__price {
-    display: block;
     text-align: left;
 }
 
@@ -210,19 +209,17 @@
 }
 
 .section-gallery__body {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    height: 780px;
-    width: 70%;
+    display: none;
+    height: 0;
+    width: 75%;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    padding: 50px 0;
+    align-content: space-between;
     margin: 0 auto;
-    display: none;
+    overflow: hidden;
 }
 
 .section-gallery__img {
@@ -245,8 +242,9 @@
 }
 
 .section-gallery__link {
-    width: 160px;
-    height: 160px;
+    width: 16vh;
+    height: 16vh;
+    margin: 5px;
     position: relative;
     overflow: hidden;
     -webkit-transition: 1s;
@@ -256,14 +254,14 @@
 
 .section-gallery__link:before {
     content: "";
-    width: 110px;
-    height: 110px;
+    width: 11vh;
+    height: 11vh;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%) scale(2);
     -ms-transform: translate(-50%, -50%) scale(2);
     transform: translate(-50%, -50%) scale(2);
-    line-height: 110px;
+    line-height: 11vh;
     position: absolute;
     text-align: center;
     -webkit-transition: 0.5s ease-out;
@@ -297,8 +295,8 @@
     display: block;
     position: absolute;
     top: 0;
-    width: 160px;
-    height: 160px;
+    width: 16vh;
+    height: 16vh;
     background-color: #927c8a4f;
     z-index: 100;
     -webkit-transition: 0.5s;
@@ -319,6 +317,49 @@
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s;
+}
+
+.show-gallery {
+    animation: show-gallery-animation 2s ease-in forwards;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.hide-gallery {
+    animation: hide-gallery-animation 2s ease-in forwards;
+}
+
+.reduce-gallery-heading {
+    animation: reduce-gllr-hdg-animation 2s ease-in forwards;
+}
+
+@keyframes show-gallery-animation {
+    100% {
+        height: 90vh;
+        padding: 5vh 0;
+    }
+}
+
+@keyframes hide-gallery-animation {
+    100% {
+        height: 0;
+        padding: 0;
+    }
+}
+
+@keyframes reduce-gllr-hdg-animation {
+    100% {
+        height: 10vh;
+        padding-top: 4vh;
+    }
+}
+
+@keyframes restor-gllr-hdg-animation {
+    100% {
+        height: 25vh;
+        padding-top: 7vh;
+    }
 }
 
 .section-price {
@@ -557,8 +598,8 @@
     height: 35vh;
     padding: 4vh 0 2vh;
     text-align: center;
-    background: -o-linear-gradient(55deg, rgba(205, 195, 218, 0) 35%, rgba(215, 215, 215, 0.5) 35%), -o-linear-gradient(left, rgba(192, 192, 192, 0.451) 0%, rgba(192, 192, 192, 0.451) 100%), -o-linear-gradient(345deg, rgba(227, 205, 255, 0.3) 30%, rgb(227, 205, 255, 0) 30%), -o-linear-gradient(315deg, rgba(227, 205, 255, 0) 40%, rgb(227, 205, 255, 0.5) 40%), -o-linear-gradient(315deg, rgb(227, 205, 255, 0) 48%, rgba(236, 222, 255, 0.8) 48%), -o-linear-gradient(55deg, rgba(227, 205, 255, 0) 54%, rgba(201, 160, 255, 1) 46%), -o-linear-gradient(15deg, rgba(227, 205, 255, 1) 20%, rgba(227, 205, 255, 0) 20%), url("../img/temp2.jpg") 20% 40% / 40%;
-    background: linear-gradient(35deg, rgba(205, 195, 218, 0) 35%, rgba(215, 215, 215, 0.5) 35%), linear-gradient(90deg, rgba(192, 192, 192, 0.451) 0%, rgba(192, 192, 192, 0.451) 100%), linear-gradient(105deg, rgba(227, 205, 255, 0.3) 30%, rgb(227, 205, 255, 0) 30%), linear-gradient(135deg, rgba(227, 205, 255, 0) 40%, rgb(227, 205, 255, 0.5) 40%), linear-gradient(135deg, rgb(227, 205, 255, 0) 48%, rgba(236, 222, 255, 0.8) 48%), linear-gradient(35deg, rgba(227, 205, 255, 0) 54%, rgba(201, 160, 255, 1) 46%), linear-gradient(75deg, rgba(227, 205, 255, 1) 20%, rgba(227, 205, 255, 0) 20%), url("../img/temp2.jpg") 20% 40% / 40%;
+    background: -o-linear-gradient(55deg, rgba(205, 195, 218, 0) 35%, rgba(215, 215, 215, 0.5) 35%), -o-linear-gradient(left, rgba(192, 192, 192, 0.451) 0%, rgba(192, 192, 192, 0.451) 100%), -o-linear-gradient(345deg, rgba(227, 205, 255, 0.3) 30%, rgb(227, 205, 255, 0) 30%) fixed, -o-linear-gradient(315deg, rgba(227, 205, 255, 0) 40%, rgb(227, 205, 255, 0.5) 40%) fixed, -o-linear-gradient(315deg, rgb(227, 205, 255, 0) 48%, rgba(236, 222, 255, 0.8) 48%), -o-linear-gradient(55deg, rgba(227, 205, 255, 0) 54%, rgba(201, 160, 255, 1) 46%), -o-linear-gradient(15deg, rgba(227, 205, 255, 1) 20%, rgba(227, 205, 255, 0) 20%), url("../img/temp2.jpg") 20% 40% / 40%;
+    background: linear-gradient(35deg, rgba(205, 195, 218, 0) 35%, rgba(215, 215, 215, 0.5) 35%), linear-gradient(90deg, rgba(192, 192, 192, 0.451) 0%, rgba(192, 192, 192, 0.451) 100%), linear-gradient(105deg, rgba(227, 205, 255, 0.3) 30%, rgb(227, 205, 255, 0) 30%) fixed, linear-gradient(135deg, rgba(227, 205, 255, 0) 40%, rgb(227, 205, 255, 0.5) 40%) fixed, linear-gradient(135deg, rgb(227, 205, 255, 0) 48%, rgba(236, 222, 255, 0.8) 48%), linear-gradient(35deg, rgba(227, 205, 255, 0) 54%, rgba(201, 160, 255, 1) 46%), linear-gradient(75deg, rgba(227, 205, 255, 1) 20%, rgba(227, 205, 255, 0) 20%), url("../img/temp2.jpg") 20% 40% / 40%;
 }
 
 .section-contacts__heading {
@@ -610,6 +651,25 @@
     transition: 0.3s;
 }
 
+.dsgn-link::before {
+    font-family: 'Ligature Symbols';
+    font-style: normal;
+    margin-right: 15px;
+}
+
+.icon-inst::before {
+    content: '\E155';
+}
+
+.icon-tel::before {
+    content: '\E100';
+}
+
+.icon-map::before {
+    content: '\E103';
+    top: 20%;
+}
+
 .dsgn-link:active {
     -webkit-transition: 0.2s;
     -o-transition: 0.2s;
@@ -618,7 +678,7 @@
 }
 
 .section-contacts__contacts a {
-    margin-left: 85px;
+    margin-left: 70px;
     line-height: 4vh;
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     color: #bb4692;
@@ -687,6 +747,12 @@
     position: relative;
 }
 
+.section-contacts__address {
+    display: block;
+    font-size: 14px;
+    margin: -15px 0 0 80px;
+}
+
 .footer__link:hover {
     width: 100%;
     -webkit-transition: 0.5s;
@@ -701,6 +767,20 @@
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s;
+}
+
+@media (max-width: 1550px) {
+    .section-gallery__body {
+        width: 95%;
+    }
+    .section-gallery__link {
+        width: 14vh;
+        height: 14vh;
+    }
+    .section-gallery__link:before {
+        width: 10vh;
+        height: 10vh;
+    }
 }
 
 @media (max-width: 980px) {
@@ -816,7 +896,12 @@
     .section-contacts__contacts li {
         font-size: 14px;
     }
+    .section-contacts__address,
     .section-contacts__contacts a {
         margin-left: 25px;
+    }
+    .section-contacts__contacts li {
+        width: 100%;
+        text-align: center;
     }
 }

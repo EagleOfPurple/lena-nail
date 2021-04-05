@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <header class="header">
+    <header id="about-link" class="header">
         <div class="header__logo-container">
             <img src="img/logo.svg" alt="Logo" class="header__logo-img">
         </div>
@@ -24,11 +24,11 @@
 
         <ul class="header__menu header-menu">
             <li class="header-menu__sign-up dsg-underline header-menu__item">
-                <button class="header__sign-up header__menu-btn dsg-bg-marker">Записаться</button>
+                <a href="#sign-up-link" class="header__sign-up header__menu-btn dsg-bg-marker">Записаться</a>
             </li>
 
             <li class="header-menu__price dsg-underline header-menu__item">
-                <a href="#" class="header__price header__menu-btn dsg-bg-marker">Прайс</a>
+                <a href="#price-link" class="header__price header__menu-btn dsg-bg-marker">Прайс</a>
             </li>
             </div>
     </header>
@@ -56,8 +56,8 @@
             </ul>
         </section>
 
-        <section class="main__section section-gallery">
-            <div class="section-gallery__header media-first-h-auto">
+        <section id="price-link" class="main__section section-gallery">
+            <div id="gallery-link" class="section-gallery__header media-first-h-auto">
                 <h2 class="visually-hidden">Галерея работ</h2>
                 <!-- сделать анимацию стрелочек -->
                 <div class="section-gallery__btn-container dsg-bg-marker">
@@ -400,12 +400,12 @@
                 </ul>
 
                 <div class="section-price__btn-container media-first-width media-first-price-margine">
-                    <button class="section-price__btn item-container dsg-underline">Записаться</button>
+                    <a href="#sign-up-link" class="section-price__btn item-container dsg-underline">Записаться</a>
                 </div>
             </div>
         </section>
 
-        <section class="main__section section-form media-first-h-auto media-first-section-padding">
+        <section id="sign-up-link" class="main__section section-form media-first-h-auto media-first-section-padding">
             <h2 class="section-form__heading media-two-fs media-first-heading-margine">Запись на прием</h2>
             <form action="#" class="section-form__form">
                 <label>
@@ -430,14 +430,14 @@
             </form>
         </section>
 
-        <section class="main__section section-contacts media-first-h-auto">
+        <section id="contacts-link" class="main__section section-contacts media-first-h-auto">
             <h2 class="section-contacts__heading dsg-bg-marker media-two-fs">Контакты</h2>
 
             <address>
                 <ul class="section-contacts__contacts">
-                    <li class="section-contacts__inst"><a href="" class="dsgn-link">Instagram</a></li>
-                    <li class="section-contacts__tel"><a href="" class="dsgn-link">Tel: +7 902 250 72 87</a></li>
-                    <li class="section-contacts__map"><a href="" class="dsgn-link">Карта</a></li>
+                    <li class="section-contacts__inst"><a href="https://www.instagram.com/lena.nail39" class="dsgn-link icon-inst" target="_blank">Instagram</a></li>
+                    <li class="section-contacts__tel"><a href="https://wa.me/79022507287?text=Елена,%20добрый%20день!%20Хочу%20записаться%20к%20Вам%20на%20маникюр." class="dsgn-link icon-tel" target="_blank">Tel: +7 902 250 72 87</a></li>
+                    <li class="section-contacts__map"><a href="https://goo.gl/maps/F7kevJRoJogQ4f2A8" class="dsgn-link icon-map" target="_blank">салон красоты "Аллегро" <span class="section-contacts__address">проспект Мира 124-126</span></a></li>
                 </ul>
             </address>
         </section>
@@ -449,11 +449,11 @@
         </div>
 
         <ul class="footer__menu">
-            <li><a href="" class="footer__link media-two-fs">О нас</a></li>
-            <li><a href="" class="footer__link media-two-fs">Галерея</a></li>
-            <li><a href="" class="footer__link media-two-fs">Прайс</a></li>
-            <li><a href="" class="footer__link media-two-fs">Контакты</a></li>
-            <li><a href="" class="footer__link media-two-fs">Записаться</a></li>
+            <li><a href="#about-link" class="footer__link media-two-fs">О нас</a></li>
+            <li><a href="#gallery-link" class="footer__link media-two-fs">Галерея</a></li>
+            <li><a href="#price-link" class="footer__link media-two-fs">Прайс</a></li>
+            <li><a href="#contacts-link" class="footer__link media-two-fs">Контакты</a></li>
+            <li><a href="#sign-up-link" class="footer__link media-two-fs">Записаться</a></li>
         </ul>
 
     </footer>
