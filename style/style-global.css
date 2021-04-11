@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @font-face {
     font-family: 'Calligraphia One';
     font-weight: 400;
@@ -35,6 +42,7 @@ body {
     color: #6f3f4a;
     background-color: #f9f9f9;
     overflow-x: hidden;
+    position: relative;
 }
 
 figure {
@@ -91,6 +99,8 @@ button {
     margin: 0 auto;
 }
 
+.section-form__btn_focused,
+.section-form__btn:hover,
 .dsg-bg-marker {
     background: -o-linear-gradient(315deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.3) 10%, rgba(255, 255, 255, 0.3) 20%, rgba(255, 255, 255, 0.6) 25%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.4) 48%, rgba(255, 255, 255, 0.7) 59%, rgba(255, 255, 255, 0.9) 59%, rgba(255, 255, 255, 0.7) 60%, rgba(255, 255, 255, 0.9) 65%, rgba(255, 255, 255, 0.2) 95%);
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.3) 10%, rgba(255, 255, 255, 0.3) 20%, rgba(255, 255, 255, 0.6) 25%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.4) 48%, rgba(255, 255, 255, 0.7) 59%, rgba(255, 255, 255, 0.9) 59%, rgba(255, 255, 255, 0.7) 60%, rgba(255, 255, 255, 0.9) 65%, rgba(255, 255, 255, 0.2) 95%);
@@ -101,6 +111,10 @@ button {
     transition: 0.5s;
 }
 
+.nav-btn_focused,
+.nav-btn:hover,
+.section-form__btn_focused,
+.section-form__btn:hover,
 .dsg-bg-marker:hover {
     -webkit-animation: hover 1.5s ease-in;
     animation: hover 1.5s ease-in;
@@ -109,6 +123,10 @@ button {
     transform: scale(1.01);
 }
 
+.nav-btn_focused::after,
+.nav-btn::after,
+.section-form__btn_focused::before,
+.section-form__btn::before,
 .dsg-bg-marker::before {
     content: "";
     position: absolute;
@@ -116,8 +134,8 @@ button {
     left: -80px;
     width: 90%;
     height: 100%;
-    background: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, .0)), color-stop(rgba(255, 255, 255, .8)), to(rgba(255, 255, 255, .0))) no-repeat -60px 0%;
     background: -o-linear-gradient(right, rgba(255, 255, 255, .0), rgba(255, 255, 255, .8), rgba(255, 255, 255, .0)) no-repeat -60px 0%;
+    background: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, .0)), color-stop(rgba(255, 255, 255, .8)), to(rgba(255, 255, 255, .0))) no-repeat -60px 0%;
     background: linear-gradient(to left, rgba(255, 255, 255, .0), rgba(255, 255, 255, .8), rgba(255, 255, 255, .0)) no-repeat -60px 0%;
     background-size: 60px 100%;
     -webkit-transform: skewX(-50deg);
@@ -125,6 +143,8 @@ button {
     transform: skewX(-50deg);
 }
 
+.nav-btn_focused:hover::after,
+.nav-btn:hover::after,
 .header-menu__sign-up:hover::after,
 .header-menu__price:hover::after,
 .dsg-bg-marker:hover::before {
@@ -169,8 +189,8 @@ button {
     50% {
         -webkit-transform: scale(1.01);
         transform: scale(1.01);
-        background: rgba(255, 255, 255, 0.4), -o-linear-gradient(315deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.3) 10%, rgba(255, 255, 255, 0.3) 20%, rgba(255, 255, 255, 0.6) 25%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.4) 48%, rgba(255, 255, 255, 0.7) 59%, rgba(255, 255, 255, 0.9) 59%, rgba(255, 255, 255, 0.7) 60%, rgba(255, 255, 255, 0.9) 65%, rgba(255, 255, 255, 0.2) 95%);
-        background: rgba(255, 255, 255, 0.4), linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.3) 10%, rgba(255, 255, 255, 0.3) 20%, rgba(255, 255, 255, 0.6) 25%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.4) 48%, rgba(255, 255, 255, 0.7) 59%, rgba(255, 255, 255, 0.9) 59%, rgba(255, 255, 255, 0.7) 60%, rgba(255, 255, 255, 0.9) 65%, rgba(255, 255, 255, 0.2) 95%);
+        background: -o-linear-gradient(315deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.3) 10%, rgba(255, 255, 255, 0.3) 20%, rgba(255, 255, 255, 0.6) 25%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.4) 48%, rgba(255, 255, 255, 0.7) 59%, rgba(255, 255, 255, 0.9) 59%, rgba(255, 255, 255, 0.7) 60%, rgba(255, 255, 255, 0.9) 65%, rgba(255, 255, 255, 0.2) 95%), rgba(255, 255, 255, 0.4);
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.3) 10%, rgba(255, 255, 255, 0.3) 20%, rgba(255, 255, 255, 0.6) 25%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.4) 48%, rgba(255, 255, 255, 0.7) 59%, rgba(255, 255, 255, 0.9) 59%, rgba(255, 255, 255, 0.7) 60%, rgba(255, 255, 255, 0.9) 65%, rgba(255, 255, 255, 0.2) 95%), rgba(255, 255, 255, 0.4);
     }
     100% {
         background: -o-linear-gradient(315deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.3) 10%, rgba(255, 255, 255, 0.3) 20%, rgba(255, 255, 255, 0.6) 25%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.4) 48%, rgba(255, 255, 255, 0.7) 59%, rgba(255, 255, 255, 0.9) 59%, rgba(255, 255, 255, 0.7) 60%, rgba(255, 255, 255, 0.9) 65%, rgba(255, 255, 255, 0.2) 95%);
@@ -183,8 +203,8 @@ button {
     display: block;
     height: 1px;
     position: absolute;
-    background: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, .0)), color-stop(rgba(255, 255, 255, .75)), to(rgba(255, 255, 255, .0))) no-repeat -60px 0%, #a63b81;
     background: -o-linear-gradient(right, rgba(255, 255, 255, .0), rgba(255, 255, 255, .75), rgba(255, 255, 255, .0)) no-repeat -60px 0%, #a63b81;
+    background: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, .0)), color-stop(rgba(255, 255, 255, .75)), to(rgba(255, 255, 255, .0))) no-repeat -60px 0%, #a63b81;
     background: linear-gradient(to left, rgba(255, 255, 255, .0), rgba(255, 255, 255, .75), rgba(255, 255, 255, .0)) no-repeat -60px 0%, #a63b81;
     background-size: 60px 100%;
 }
@@ -212,4 +232,13 @@ button {
     top: -10px;
     background-color: rgba(235, 252, 255, 0.1);
     z-index: -1;
+}
+
+.disable-scroll {
+    overflow: auto;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
 }

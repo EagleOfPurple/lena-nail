@@ -7,30 +7,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ногтевой сервис</title>
 
-    <link rel="preload" href="fonts/CalligraphiaOne.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/CalligraphiaOne.woff2" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="fonts/CalligraphiaOne.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/CalligraphiaOne.woff" as="font" type="font/woff">
 
     <link rel="stylesheet" type="text/css" href="style/style-global.css" />
     <link rel="stylesheet" type="text/css" href="style/style.css" />
+    <script src="javascript/jquery.js" defer></script>
+    <script src="javascript/javascript.js" defer></script>
+    <script src="javascript/jquery.inputmask.js" defer></script>
+    <script src="javascript/jquery.validate.js" defer></script>
 </head>
 
 <body>
     <header id="about-link" class="header">
-        <div class="header__logo-container">
-            <img src="img/logo.svg" alt="Logo" class="header__logo-img">
+        <div class="top-bar">
+            <div class="top-bar__container">
+                <img src="img/logo.svg" alt="Logo" class="header__logo-img">
+                <a title='Написать в WhatsApp' href="https://wa.me/79022507287?text=Елена,%20добрый%20день!%20Хочу%20записаться%20к%20Вам%20на%20маникюр." class="header__tel focusin-type-two dsgn-link icon-tel" target="_blank">+7 902 250 72 87</a>
+            </div>
         </div>
 
         <h1 class="heading dsg-bg-marker">Красота в ваших руках</h1>
 
         <ul class="header__menu header-menu">
-            <li class="header-menu__sign-up dsg-underline header-menu__item">
-                <a href="#sign-up-link" class="header__sign-up header__menu-btn dsg-bg-marker">Записаться</a>
+            <li class="header-menu__sign-up dsg-underline header-menu__item focused">
+                <a href="#sign-up-link" class="focusin-type-two nav-link header__sign-up header__menu-btn dsg-bg-marker">Записаться</a>
             </li>
 
             <li class="header-menu__price dsg-underline header-menu__item">
-                <a href="#price-link" class="header__price header__menu-btn dsg-bg-marker">Прайс</a>
+                <a href="#price-link" class="focusin-type-two nav-link header__price header__menu-btn dsg-bg-marker">Прайс</a>
             </li>
-            </div>
+        </ul>
     </header>
 
     <main class="main">
@@ -56,273 +63,275 @@
             </ul>
         </section>
 
-        <section id="price-link" class="main__section section-gallery">
+        <section id="price-link" class="main__section section-gallery target">
             <div id="gallery-link" class="section-gallery__header media-first-h-auto">
                 <h2 class="visually-hidden">Галерея работ</h2>
                 <!-- сделать анимацию стрелочек -->
                 <div class="section-gallery__btn-container dsg-bg-marker">
-                    <button class="section-gallery__btn media-two-fs">Галерея работ</button>
+                    <button class="focusin-type-two section-gallery__btn media-two-fs">Галерея работ</button>
                 </div>
             </div>
 
-            <div class="section-gallery__body">
-                <a href="" class="section-gallery__link">
-                    <picture>
-                        <source type="image/webp" srcset='img/gallery/preview-gallery-manic(1).webp'>
+            <div class="gallery-toggle">
+                <div class="section-gallery__body">
+                    <a href="#" class="section-gallery__link">
+                        <picture>
+                            <source type="image/webp" srcset='img/gallery/preview-gallery-manic(1).webp'>
+
+                            <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(1).jpg" alt="Фотография маникюра">
+                        </picture>
+                    </a>
+
+                    <a href="#" class="section-gallery__link">
+                        <picture>
+                            <source type="image/webp" srcset='img/gallery/preview-gallery-manic(2).webp'>
+
+                            <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(2).jpg" alt="Фотография маникюра">
+                        </picture>
+                    </a>
 
-                        <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(1).jpg" alt="Фотография маникюра">
-                    </picture>
-                </a>
+                    <a href="#" class="section-gallery__link">
+                        <picture>
+                            <source type="image/webp" srcset='img/gallery/preview-gallery-manic(3).webp'>
 
-                <a href="" class="section-gallery__link">
-                    <picture>
-                        <source type="image/webp" srcset='img/gallery/preview-gallery-manic(2).webp'>
+                            <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(3).jpg" alt="Фотография маникюра">
+                        </picture>
+                    </a>
 
-                        <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(2).jpg" alt="Фотография маникюра">
-                    </picture>
-                </a>
+                    <a href="#" class="section-gallery__link">
+                        <picture>
+                            <source type="image/webp" srcset='img/gallery/preview-gallery-manic(4).webp'>
 
-                <a href="" class="section-gallery__link">
-                    <picture>
-                        <source type="image/webp" srcset='img/gallery/preview-gallery-manic(3).webp'>
+                            <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(4).jpg" alt="Фотография маникюра">
+                        </picture>
+                    </a>
 
-                        <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(3).jpg" alt="Фотография маникюра">
-                    </picture>
-                </a>
+                    <a href="#" class="section-gallery__link">
+                        <picture>
+                            <source type="image/webp" srcset='img/gallery/preview-gallery-manic(5).webp'>
 
-                <a href="" class="section-gallery__link">
-                    <picture>
-                        <source type="image/webp" srcset='img/gallery/preview-gallery-manic(5).webp'>
+                            <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(5).jpg" alt="Фотография маникюра">
+                        </picture>
+                    </a>
 
-                        <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(5).jpg" alt="Фотография маникюра">
-                    </picture>
-                </a>
+                    <a href="#" class="section-gallery__link">
+                        <picture>
+                            <source type="image/webp" srcset='img/gallery/preview-gallery-manic(6).webp'>
 
-                <a href="" class="section-gallery__link">
-                    <picture>
-                        <source type="image/webp" srcset='img/gallery/preview-gallery-manic(6).webp'>
+                            <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(6).jpg" alt="Фотография маникюра">
+                        </picture>
+                    </a>
 
-                        <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(6).jpg" alt="Фотография маникюра">
-                    </picture>
-                </a>
+                    <a href="#" class="section-gallery__link">
+                        <picture>
+                            <source type="image/webp" srcset='img/gallery/preview-gallery-manic(7).webp'>
 
-                <a href="" class="section-gallery__link">
-                    <picture>
-                        <source type="image/webp" srcset='img/gallery/preview-gallery-manic(7).webp'>
+                            <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(7).jpg" alt="Фотография маникюра">
+                        </picture>
+                    </a>
 
-                        <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(7).jpg" alt="Фотография маникюра">
-                    </picture>
-                </a>
+                    <a href="#" class="section-gallery__link">
+                        <picture>
+                            <source type="image/webp" srcset='img/gallery/preview-gallery-manic(8).webp'>
 
-                <a href="" class="section-gallery__link">
-                    <picture>
-                        <source type="image/webp" srcset='img/gallery/preview-gallery-manic(8).webp'>
+                            <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(8).jpg" alt="Фотография маникюра">
+                        </picture>
+                    </a>
 
-                        <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(8).jpg" alt="Фотография маникюра">
-                    </picture>
-                </a>
+                    <a href="#" class="section-gallery__link">
+                        <picture>
+                            <source type="image/webp" srcset='img/gallery/preview-gallery-manic(9).webp'>
 
-                <a href="" class="section-gallery__link">
-                    <picture>
-                        <source type="image/webp" srcset='img/gallery/preview-gallery-manic(9).webp'>
+                            <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(9).jpg" alt="Фотография маникюра">
+                        </picture>
+                    </a>
 
-                        <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(9).jpg" alt="Фотография маникюра">
-                    </picture>
-                </a>
+                    <a href="#" class="section-gallery__link">
+                        <picture>
+                            <source type="image/webp" srcset='img/gallery/preview-gallery-manic(10).webp'>
 
-                <a href="" class="section-gallery__link">
-                    <picture>
-                        <source type="image/webp" srcset='img/gallery/preview-gallery-manic(10).webp'>
+                            <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(10).jpg" alt="Фотография маникюра">
+                        </picture>
+                    </a>
 
-                        <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(10).jpg" alt="Фотография маникюра">
-                    </picture>
-                </a>
+                    <a href="#" class="section-gallery__link">
+                        <picture>
+                            <source type="image/webp" srcset='img/gallery/preview-gallery-manic(11).webp'>
 
-                <a href="" class="section-gallery__link">
-                    <picture>
-                        <source type="image/webp" srcset='img/gallery/preview-gallery-manic(11).webp'>
+                            <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(11).jpg" alt="Фотография маникюра">
+                        </picture>
+                    </a>
 
-                        <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(11).jpg" alt="Фотография маникюра">
-                    </picture>
-                </a>
+                    <a href="#" class="section-gallery__link">
+                        <picture>
+                            <source type="image/webp" srcset='img/gallery/preview-gallery-manic(12).webp'>
 
-                <a href="" class="section-gallery__link">
-                    <picture>
-                        <source type="image/webp" srcset='img/gallery/preview-gallery-manic(12).webp'>
+                            <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(12).jpg" alt="Фотография маникюра">
+                        </picture>
 
-                        <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(12).jpg" alt="Фотография маникюра">
-                    </picture>
+                    </a>
 
-                </a>
+                    <a href="#" class="section-gallery__link">
+                        <picture>
+                            <source type="image/webp" srcset='img/gallery/preview-gallery-manic(13).webp'>
 
-                <a href="" class="section-gallery__link">
-                    <picture>
-                        <source type="image/webp" srcset='img/gallery/preview-gallery-manic(13).webp'>
+                            <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(13).jpg" alt="Фотография маникюра">
+                        </picture>
+                    </a>
 
-                        <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(13).jpg" alt="Фотография маникюра">
-                    </picture>
-                </a>
+                    <a href="#" class="section-gallery__link">
+                        <picture>
+                            <source type="image/webp" srcset='img/gallery/preview-gallery-manic(14).webp'>
 
-                <a href="" class="section-gallery__link">
-                    <picture>
-                        <source type="image/webp" srcset='img/gallery/preview-gallery-manic(14).webp'>
+                            <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(14).jpg" alt="Фотография маникюра">
+                        </picture>
 
-                        <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(14).jpg" alt="Фотография маникюра">
-                    </picture>
+                    </a>
 
-                </a>
+                    <a href="#" class="section-gallery__link">
+                        <picture>
+                            <source type="image/webp" srcset='img/gallery/preview-gallery-manic(15).webp'>
 
-                <a href="" class="section-gallery__link">
-                    <picture>
-                        <source type="image/webp" srcset='img/gallery/preview-gallery-manic(15).webp'>
+                            <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(15).jpg" alt="Фотография маникюра">
+                        </picture>
+                    </a>
 
-                        <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(15).jpg" alt="Фотография маникюра">
-                    </picture>
-                </a>
+                    <a href="#" class="section-gallery__link">
+                        <picture>
+                            <source type="image/webp" srcset='img/gallery/preview-gallery-manic(16).webp'>
 
-                <a href="" class="section-gallery__link">
-                    <picture>
-                        <source type="image/webp" srcset='img/gallery/preview-gallery-manic(16).webp'>
+                            <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(16).jpg" alt="Фотография маникюра">
+                        </picture>
+                    </a>
 
-                        <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(16).jpg" alt="Фотография маникюра">
-                    </picture>
-                </a>
+                    <a href="#" class="section-gallery__link">
+                        <picture>
+                            <source type="image/webp" srcset='img/gallery/preview-gallery-manic(17).webp'>
 
-                <a href="" class="section-gallery__link">
-                    <picture>
-                        <source type="image/webp" srcset='img/gallery/preview-gallery-manic(17).webp'>
+                            <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(17).jpg" alt="Фотография маникюра">
+                        </picture>
+                    </a>
 
-                        <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(17).jpg" alt="Фотография маникюра">
-                    </picture>
-                </a>
+                    <a href="#" class="section-gallery__link">
+                        <picture>
+                            <source type="image/webp" srcset='img/gallery/preview-gallery-manic(18).webp'>
 
-                <a href="" class="section-gallery__link">
-                    <picture>
-                        <source type="image/webp" srcset='img/gallery/preview-gallery-manic(18).webp'>
+                            <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(18).jpg" alt="Фотография маникюра">
+                        </picture>
+                    </a>
 
-                        <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(18).jpg" alt="Фотография маникюра">
-                    </picture>
-                </a>
+                    <a href="#" class="section-gallery__link">
+                        <picture>
+                            <source type="image/webp" srcset='img/gallery/preview-gallery-manic(19).webp'>
 
-                <a href="" class="section-gallery__link">
-                    <picture>
-                        <source type="image/webp" srcset='img/gallery/preview-gallery-manic(19).webp'>
+                            <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(19).jpg" alt="Фотография маникюра">
+                        </picture>
+                    </a>
 
-                        <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(19).jpg" alt="Фотография маникюра">
-                    </picture>
-                </a>
+                    <a href="#" class="section-gallery__link">
+                        <picture>
+                            <source type="image/webp" srcset='img/gallery/preview-gallery-manic(20).webp'>
 
-                <a href="" class="section-gallery__link">
-                    <picture>
-                        <source type="image/webp" srcset='img/gallery/preview-gallery-manic(20).webp'>
+                            <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(20).jpg" alt="Фотография маникюра">
+                        </picture>
+                    </a>
 
-                        <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(20).jpg" alt="Фотография маникюра">
-                    </picture>
-                </a>
+                    <a href="#" class="section-gallery__link">
+                        <picture>
+                            <source type="image/webp" srcset='img/gallery/preview-gallery-manic(21).webp'>
 
-                <a href="" class="section-gallery__link">
-                    <picture>
-                        <source type="image/webp" srcset='img/gallery/preview-gallery-manic(21).webp'>
+                            <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(21).jpg" alt="Фотография маникюра">
+                        </picture>
+                    </a>
 
-                        <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(21).jpg" alt="Фотография маникюра">
-                    </picture>
-                </a>
+                    <a href="#" class="section-gallery__link">
+                        <picture>
+                            <source type="image/webp" srcset='img/gallery/preview-gallery-manic(22).webp'>
 
-                <a href="" class="section-gallery__link">
-                    <picture>
-                        <source type="image/webp" srcset='img/gallery/preview-gallery-manic(22).webp'>
+                            <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(22).jpg" alt="Фотография маникюра">
+                        </picture>
+                    </a>
 
-                        <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(22).jpg" alt="Фотография маникюра">
-                    </picture>
-                </a>
+                    <a href="#" class="section-gallery__link">
+                        <picture>
+                            <source type="image/webp" srcset='img/gallery/preview-gallery-manic(23).webp'>
 
-                <a href="" class="section-gallery__link">
-                    <picture>
-                        <source type="image/webp" srcset='img/gallery/preview-gallery-manic(23).webp'>
+                            <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(23).jpg" alt="Фотография маникюра">
+                        </picture>
+                    </a>
 
-                        <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(23).jpg" alt="Фотография маникюра">
-                    </picture>
-                </a>
+                    <a href="#" class="section-gallery__link">
+                        <picture>
+                            <source type="image/webp" srcset='img/gallery/preview-gallery-manic(24).webp'>
 
-                <a href="" class="section-gallery__link">
-                    <picture>
-                        <source type="image/webp" srcset='img/gallery/preview-gallery-manic(24).webp'>
+                            <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(24).jpg" alt="Фотография маникюра">
+                        </picture>
+                    </a>
 
-                        <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(24).jpg" alt="Фотография маникюра">
-                    </picture>
-                </a>
+                    <a href="#" class="section-gallery__link">
+                        <picture>
+                            <source type="image/webp" srcset='img/gallery/preview-gallery-manic(25).webp'>
 
-                <a href="" class="section-gallery__link">
-                    <picture>
-                        <source type="image/webp" srcset='img/gallery/preview-gallery-manic(25).webp'>
+                            <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(25).jpg" alt="Фотография маникюра">
+                        </picture>
+                    </a>
 
-                        <img class="section-gallery__img" src="img/gallery/preview-gallery-manic(25).jpg" alt="Фотография маникюра">
-                    </picture>
-                </a>
+                    <a href="#" class="section-gallery__link">
+                        <picture>
+                            <source type="image/webp" srcset='img/gallery/preview-gallery-pedic(1).webp'>
 
-                <a href="" class="section-gallery__link">
-                    <picture>
-                        <source type="image/webp" srcset='img/gallery/preview-gallery-pedic(1).webp'>
+                            <img class="section-gallery__img" src="img/gallery/preview-gallery-pedic(1).jpg" alt="Фотография маникюра">
+                        </picture>
+                    </a>
 
-                        <img class="section-gallery__img" src="img/gallery/preview-gallery-pedic(1).jpg" alt="Фотография маникюра">
-                    </picture>
-                </a>
+                    <a href="#" class="section-gallery__link">
+                        <picture>
+                            <source type="image/webp" srcset='img/gallery/preview-gallery-pedic(2).webp'>
 
-                <a href="" class="section-gallery__link">
-                    <picture>
-                        <source type="image/webp" srcset='img/gallery/preview-gallery-pedic(2).webp'>
+                            <img class="section-gallery__img" src="img/gallery/preview-gallery-pedic(2).jpg" alt="Фотография маникюра">
+                        </picture>
+                    </a>
 
-                        <img class="section-gallery__img" src="img/gallery/preview-gallery-pedic(2).jpg" alt="Фотография маникюра">
-                    </picture>
-                </a>
+                    <a href="#" class="section-gallery__link">
+                        <picture>
+                            <source type="image/webp" srcset='img/gallery/preview-gallery-pedic(3).webp'>
 
-                <a href="" class="section-gallery__link">
-                    <picture>
-                        <source type="image/webp" srcset='img/gallery/preview-gallery-pedic(3).webp'>
+                            <img class="section-gallery__img" src="img/gallery/preview-gallery-pedic(3).jpg" alt="Фотография маникюра">
+                        </picture>
+                    </a>
 
-                        <img class="section-gallery__img" src="img/gallery/preview-gallery-pedic(3).jpg" alt="Фотография маникюра">
-                    </picture>
-                </a>
+                    <a href="#" class="section-gallery__link">
+                        <picture>
+                            <source type="image/webp" srcset='img/gallery/preview-gallery-pedic(4).webp'>
 
-                <a href="" class="section-gallery__link">
-                    <picture>
-                        <source type="image/webp" srcset='img/gallery/preview-gallery-pedic(4).webp'>
+                            <img class="section-gallery__img" src="img/gallery/preview-gallery-pedic(4).jpg" alt="Фотография маникюра">
+                        </picture>
+                    </a>
 
-                        <img class="section-gallery__img" src="img/gallery/preview-gallery-pedic(4).jpg" alt="Фотография маникюра">
-                    </picture>
-                </a>
+                    <a href="#" class="section-gallery__link">
+                        <picture>
+                            <source type="image/webp" srcset='img/gallery/preview-gallery-pedic(5).webp'>
 
-                <a href="" class="section-gallery__link">
-                    <picture>
-                        <source type="image/webp" srcset='img/gallery/preview-gallery-pedic(5).webp'>
+                            <img class="section-gallery__img" src="img/gallery/preview-gallery-pedic(5).jpg" alt="Фотография маникюра">
+                        </picture>
+                    </a>
 
-                        <img class="section-gallery__img" src="img/gallery/preview-gallery-pedic(5).jpg" alt="Фотография маникюра">
-                    </picture>
-                </a>
+                    <a href="#" class="section-gallery__link">
+                        <picture>
+                            <source type="image/webp" srcset='img/gallery/preview-gallery-pedic(6).webp'>
 
-                <a href="" class="section-gallery__link">
-                    <picture>
-                        <source type="image/webp" srcset='img/gallery/preview-gallery-pedic(6).webp'>
+                            <img class="section-gallery__img" src="img/gallery/preview-gallery-pedic(6).jpg" alt="Фотография маникюра">
+                        </picture>
+                    </a>
 
-                        <img class="section-gallery__img" src="img/gallery/preview-gallery-pedic(6).jpg" alt="Фотография маникюра">
-                    </picture>
-                </a>
+                    <a href="#" class="section-gallery__link">
+                        <picture>
+                            <source type="image/webp" srcset='img/gallery/preview-gallery-pedic(7).webp'>
 
-                <a href="" class="section-gallery__link">
-                    <picture>
-                        <source type="image/webp" srcset='img/gallery/preview-gallery-pedic(7).webp'>
-
-                        <img class="section-gallery__img" src="img/gallery/preview-gallery-pedic(7).jpg" alt="Фотография маникюра">
-                    </picture>
-                </a>
-
-                <a href="" class="section-gallery__link">
-                    <picture>
-                        <source type="image/webp" srcset='img/gallery/preview-gallery-pedic(8).webp'>
-
-                        <img class="section-gallery__img" src="img/gallery/preview-gallery-pedic(8).jpg" alt="Фотография маникюра">
-                    </picture>
-                </a>
+                            <img class="section-gallery__img" src="img/gallery/preview-gallery-pedic(7).jpg" alt="Фотография маникюра">
+                        </picture>
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -400,33 +409,34 @@
                 </ul>
 
                 <div class="section-price__btn-container media-first-width media-first-price-margine">
-                    <a href="#sign-up-link" class="section-price__btn item-container dsg-underline">Записаться</a>
+                    <a href="#sign-up-link" class="section-price__btn nav-link item-container dsg-underline focusin-type-one">Записаться</a>
                 </div>
             </div>
         </section>
 
         <section id="sign-up-link" class="main__section section-form media-first-h-auto media-first-section-padding">
             <h2 class="section-form__heading media-two-fs media-first-heading-margine">Запись на прием</h2>
-            <form action="#" class="section-form__form">
+            <form id="submit-form" class="section-form__form" method="POST">
+                <input type="hidden" name="site" value="Ногтевой сервис">
+                <input type="hidden" name="email" value="email@gmail.com">
+                <input type="hidden" name="subject" value="Сообщение от клиента">
+
                 <label>
-                    Имя:
-                    <input type="text" name="firstName" class="section-form__input">
+                    Имя*:
+                    <input type="text" name="firstName" class="section-form__input" required>
                 </label>
 
                 <label>
-                    Фамилия:
-                    <input type="text" name="secondName" class="section-form__input">
-                </label>
-
-                <label>
-                    Телефон:
-                    <input type="text" name="tel" class="section-form__input">
+                    Телефон*:
+                    <input type="tel" name="tel" class="section-form__input" placeholder="+7 (___) ___-__-__" required>
                 </label>
 
                 <label>
                     Дата и время:
                     <input type="text" name="timeDate" id="datetimepicker" class="section-form__input">
                 </label>
+
+                <button class="section-form__btn">Записаться</button>
             </form>
         </section>
 
@@ -435,13 +445,25 @@
 
             <address>
                 <ul class="section-contacts__contacts">
-                    <li class="section-contacts__inst"><a href="https://www.instagram.com/lena.nail39" class="dsgn-link icon-inst" target="_blank">Instagram</a></li>
-                    <li class="section-contacts__tel"><a href="https://wa.me/79022507287?text=Елена,%20добрый%20день!%20Хочу%20записаться%20к%20Вам%20на%20маникюр." class="dsgn-link icon-tel" target="_blank">Tel: +7 902 250 72 87</a></li>
-                    <li class="section-contacts__map"><a href="https://goo.gl/maps/F7kevJRoJogQ4f2A8" class="dsgn-link icon-map" target="_blank">салон красоты "Аллегро" <span class="section-contacts__address">проспект Мира 124-126</span></a></li>
+                    <li class="section-contacts__item section-contacts__inst"><a href="https://www.instagram.com/lena.nail39" class="focusin-type-two dsgn-link icon-inst" target="_blank">Instagram</a></li>
+                    <li class="section-contacts__item section-contacts__tel" title="WhatsApp"><a href="https://wa.me/79022507287?text=Елена,%20добрый%20день!%20Хочу%20записаться%20к%20Вам%20на%20маникюр." class="focusin-type-two dsgn-link icon-tel" target="_blank">+7 902 250 72 87</a></li>
+                    <li class="section-contacts__item section-contacts__map"><a href="https://goo.gl/maps/F7kevJRoJogQ4f2A8" class="focusin-type-two dsgn-link icon-map" target="_blank">салон красоты "Аллегро" <span class="section-contacts__address">проспект Мира 124-126</span></a></li>
                 </ul>
             </address>
         </section>
     </main>
+
+    <aside class="aside">
+        <div class="img-container">
+            <picture class="aside__picture">
+                <img src="#" alt="#">
+            </picture>
+            <div class="aside__nav">
+                <button class="nav-btn nav-btn_prev">Назад</button>
+                <button class="nav-btn nav-btn_next">Следующая</button>
+            </div>
+        </div>
+    </aside>
 
     <footer class="footer media-first-h-auto media-first-section-padding">
         <div class="footer__logo-container">
@@ -449,16 +471,18 @@
         </div>
 
         <ul class="footer__menu">
-            <li><a href="#about-link" class="footer__link media-two-fs">О нас</a></li>
-            <li><a href="#gallery-link" class="footer__link media-two-fs">Галерея</a></li>
-            <li><a href="#price-link" class="footer__link media-two-fs">Прайс</a></li>
-            <li><a href="#contacts-link" class="footer__link media-two-fs">Контакты</a></li>
-            <li><a href="#sign-up-link" class="footer__link media-two-fs">Записаться</a></li>
+            <li><a href="#about-link" class="footer__link nav-link media-two-fs focusin-type-one">О нас</a></li>
+            <li><a href="#gallery-link" class="footer__link nav-link media-two-fs focusin-type-one footer__link_gal">Галерея</a></li>
+            <li><a href="#price-link" class="footer__link nav-link media-two-fs focusin-type-one">Прайс</a></li>
+            <li><a href="#contacts-link" class="footer__link nav-link media-two-fs focusin-type-one">Контакты</a></li>
+            <li><a href="#sign-up-link" class="footer__link nav-link media-two-fs focusin-type-one">Записаться</a></li>
         </ul>
 
+        <div class="trade-mark">
+            <span class="trade-mark__author">&copy; Дарья А., 2021</span>
+            <a href="http://www.onlinewebfonts.com" class="trade-mark__font" target="_blank">Использован шрифт Calligraphia One</a>
+        </div>
     </footer>
-
-    <!-- <aside><a href="http://www.onlinewebfonts.com">oNline Web Fonts</a></aside> -->
 </body>
 
 </html>
